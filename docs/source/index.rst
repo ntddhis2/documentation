@@ -26,6 +26,40 @@ Getting started
 ------------
 
 Hosting
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 The NTD DHIS2 Database[1] for Ethiopia is currently hosted by BAO Systems[2], a leading DHIS2 cloud hosting provider.  BAO Systems provides nightly backups of the database and server administration support for server upgrades and is managed through their management portal (see Figure 1 below). The monthly fees for this service are billed annually at  $144/month. The current service contract with BAO Systems expired on November 30th, 2020.  If necessary, moving this database to another cloud hosting provider or even an on-premise server within the FMOH is possible with the support of a DHIS2 server administrator.
+
+Data model
+~~~~~~~~~~~~~~~~
+
+The NTD DHIS2 data model consists of 11 datasets
+
+User Roles
+~~~~~~~~~~~~~~~~
+
+There are currently 4 types of users in the system including National Data Manager, Regional Data Manager. These roles for the NTD Database for DHIS2 are based on the recommendations for user management in a health system.
+
+Data Import
+------------
+The NTD DHIS2 database is a data warehouse and is intended to leverage integrations with other data systems over direct data entry. Data integrations have been configured for the following systems.
+
+Microsoft Excel
+~~~~~~~~~~~~~~~~
+Using the Data Import Wizard app, this annual JRF, EPIRF, JRSM, TEMF, and WASH Excel workbook can be imported directly into the database. 
+
+1. If it’s not already, install the Data Import Prepare the import file. All imported data need to conform to the value type of each data element. For example, data elements defined as Integers should be whole numbers.
+2. Create the Mapping. In DHIS2, navigate to the Data Import Wizard and select Aggregate from the menu and click on the appropriate mapping for the file type being imported.  When prompted for an import file,  select the Excel file to be imported based on the example import file provided.
+3. Review the import data and Import Summary screen and make corrections to the mapping or the data import file as needed.
+
+Tropical Data
+~~~~~~~~~~~~~~~~
+Tropical Data is an online database of Trachoma survey data started by the Global Trachoma Mapping Project (GTMP). The NTD DHIS2 database pulls data from Tropical Data. This process works by executing a script which exports data using the Tropical Data API and then transforms it into a file that can be imported. This script and its documentation can be found here in NTD DHIS2 database code repository.
+WHO ESPEN Portal
+
+The ESPEN Portal is an electronic platform designed to enable health ministries and stakeholders to share, and exchange subnational program data, in support of the NTD control and elimination goals. The Expanded Special Project for Elimination of Neglected Tropical Diseases (ESPEN) was established as a partnership between WHO Regional Office for Africa (AFRO), the Member States and NTD partners The NTD DHIS2 database pulls data from ESPEN Portal. This process works by executing a script which exports data using the ESPEN Portal API and then transforms it into a file that can be imported. This script and its documentation can be found here in the NTD DHIS2 database code repository.
+
+NTDeliver
+~~~~~~~~~~~~~~~~
+NTDeliver is an online platform that centralizes and coordinates information from a variety of sources to better monitor and evaluate the NTD supply chain. The NTD DHIS2 database provides a view to the NTDeliver country summary report with a link provided on the Reports dashboard.
+
