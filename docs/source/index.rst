@@ -45,7 +45,7 @@ Data Import
 The NTD DHIS2 database is a data warehouse and is intended to leverage integrations with other data systems over direct data entry. Data integrations have been configured for the following systems.
 
 Microsoft Excel
-~~~~~~~~~~~~~~~~
+------------
 Using the Data Import Wizard app, this annual JRF, EPIRF, JRSM, TEMF, and WASH Excel workbook can be imported directly into the database. 
 
 1. If it’s not already, install the Data Import Prepare the import file. All imported data need to conform to the value type of each data element. For example, data elements defined as Integers should be whole numbers.
@@ -53,13 +53,19 @@ Using the Data Import Wizard app, this annual JRF, EPIRF, JRSM, TEMF, and WASH E
 3. Review the import data and Import Summary screen and make corrections to the mapping or the data import file as needed.
 
 Tropical Data
-~~~~~~~~~~~~~~~~
+------------
 Tropical Data is an online database of Trachoma survey data started by the Global Trachoma Mapping Project (GTMP). The NTD DHIS2 database pulls data from Tropical Data. This process works by executing a script which exports data using the Tropical Data API and then transforms it into a file that can be imported. This script and its documentation can be found here in NTD DHIS2 database code repository.
 WHO ESPEN Portal
 
 The ESPEN Portal is an electronic platform designed to enable health ministries and stakeholders to share, and exchange subnational program data, in support of the NTD control and elimination goals. The Expanded Special Project for Elimination of Neglected Tropical Diseases (ESPEN) was established as a partnership between WHO Regional Office for Africa (AFRO), the Member States and NTD partners The NTD DHIS2 database pulls data from ESPEN Portal. This process works by executing a script which exports data using the ESPEN Portal API and then transforms it into a file that can be imported. This script and its documentation can be found here in the NTD DHIS2 database code repository.
 
 NTDeliver
-~~~~~~~~~~~~~~~~
+------------
 NTDeliver is an online platform that centralizes and coordinates information from a variety of sources to better monitor and evaluate the NTD supply chain. The NTD DHIS2 database provides a view to the NTDeliver country summary report with a link provided on the Reports dashboard.
 
+
+User Guide
+===================================
+
+Introduction
+------------
