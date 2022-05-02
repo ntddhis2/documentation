@@ -40,3 +40,9 @@ def setup(app):
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+
+# Build PDF & ePub
+formats:
+  - epub
+  - pdf
