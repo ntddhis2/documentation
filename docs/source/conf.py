@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'NTD DHIS2 documentation'
-copyright = '2021, Graziella'
+copyright = '2021, RTI'
 author = 'Adam Preston'
 
 release = '0.1'
@@ -31,6 +31,13 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
+
+html_static_path = ['_static']
+
+# help with table formattings
+html_css_files = [
+    'css/custom.css',
+]
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
