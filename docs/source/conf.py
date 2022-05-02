@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'NTD DHIS2 documentation'
+project = 'NTD DHIS2 Documentation'
 copyright = '2021, RTI'
 author = 'Adam Preston'
 
@@ -34,10 +34,9 @@ html_theme = 'sphinx_rtd_theme'
 
 html_static_path = ['_static']
 
-# help with table formattings
-html_css_files = [
-    'css/custom.css',
-]
+
+def setup(app):
+    app.add_css_file('css/custom.css')
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

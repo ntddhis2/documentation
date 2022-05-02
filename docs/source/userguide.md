@@ -16,7 +16,7 @@ The NTD DHIS2 database is a national NTD database that can be accessed by author
 * Drug procurement tracking - NTDeliver
 * WASH - mWater
 
-![Image 1. NTD DHIS2 database to aggregate all NTD programmatic data](/_static/diagram.png)
+![NTD DHIS2 database to aggregate all NTD programmatic data](/_static/diagram.png)
 
 **NTD DHIS2 database vs HMIS?**
 
@@ -30,20 +30,14 @@ Getting started
 
 ### How do I request an account?
 
-To request access to the NTD DHIS2 database you will need to submit your request to the FMOH DHIS2 administrator by email to tsede171@gmail.com. Your request should include the following information:
-
-    Name
-    Phone number with country code
-    Email address
-    Organization name
-
+To request access to the NTD DHIS2 database you will need to submit your request to the FMOH DHIS2 administrator by email to tsede171@gmail.com. Your request should include the following information: Name, Phone number with country code, Email address, Organization name
 
 ### How do I access the NTD DHIS2 database?
 
-The NTD DHIS2 database can be accessed using your web browser by going to https://ethiopia.integratedntddb.org/ and logging in with your assigned username and password. The level of access within the system is granted to you by the NTD DHIS2 administrator.
+The NTD DHIS2 database can be accessed using your web browser by going to [here](https://ethiopia.integratedntddb.org/) and logging in with your assigned username and password. The level of access within the system is granted to you by the NTD DHIS2 administrator.
 
 
-![Image 1. NTD DHIS2 database to aggregate all NTD programmatic data](/_static/dhis2.png)
+![NTD DHIS2 database to aggregate all NTD programmatic data](/_static/dhis2.png)
 
 
 ## What data are included in the NTD DHIS2 database?
@@ -91,23 +85,24 @@ The NTD DHIS2 database presents coverage and endemicity for each of the five PC 
 
 ![Coverage](/_static/coverage.png)
 
+```{admonition} What are interpretations and how do I add one if I want to comment on a visualization?
+
+The interpretation feature in DHIS2 allows users to comment on data using chat and like functions that are similar to Facebook. The benefit of adding an interpretation is that the comment is linked to the data visualization and adds context for all future viewers.
+
+To add an interpretation you will need to log on to the NTD DHIS2 database and go to the visualization for which you want to add your interpretation. Click the interpretation icon (see image below) to open the interpretation box.
+```
 
 **Endemicity**
 ![Endemicity](/_static/endemicity.png)
 
 
-**What are interpretations and how do I add one if I want to comment on a visualization?**
-
-The interpretation feature in DHIS2 allows users to comment on data using chat and like functions that are similar to Facebook. The benefit of adding an interpretation is that the comment is linked to the data visualization and adds context for all future viewers.
-
-To add an interpretation you will need to log on to the NTD DHIS2 database and go to the visualization for which you want to add your interpretation. Click the interpretation icon (see image below) to open the interpretation box.
 
 ![Fullmap](/_static/fullmap2.png)
 
-For more information see the DHIS2 user manual: https://docs.dhis2.org/master/en/user/html/interpretations.html
+For more information see the [DHIS2 user manual](https://docs.dhis2.org/master/en/user/html/interpretations.html): 
 
 
-```{admonition} What do I do if I think I see a data error or missing data?
-:class: warning
+```{admonition}  What do I do if I think I see a data error or missing data?
 
 If you see data that are incorrect, please add an interpretation to explain the error (see previous section). Data in the NTD DHIS2 database may or may not be able to be edited directly in the database. Some of the data available in the system comes from integration with external databases. When this is the case, these data can only be updated on the source system. Please contact the FMOH M&E Advisor for additional guidance.
+```

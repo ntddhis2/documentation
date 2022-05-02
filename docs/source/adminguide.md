@@ -17,7 +17,7 @@ The NTD DHIS2 database is a national NTD database that can be accessed by author
 * Drug procurement tracking - NTDeliver
 * WASH - mWater
 
-![Image 1. NTD DHIS2 database to aggregate all NTD programmatic data](/_static/diagram.png)
+![NTD DHIS2 database to aggregate all NTD programmatic data](/_static/diagram.png)
 
 
 **NTD DHIS2 database vs HMIS?**
@@ -31,8 +31,10 @@ Getting Started
 
 ### Hosting
 
-The NTD DHIS2 Database[1] for Ethiopia is currently hosted by BAO Systems[2], a leading DHIS2 cloud hosting provider.  BAO Systems provides nightly backups of the database and server administration support for server upgrades and is managed through their management portal (see Figure 1 below). The monthly fees for this service are billed annually at  $144/month. The current service contract with BAO Systems expired on November 30th, 2020.  If necessary, moving this database to another cloud hosting provider or even an on-premise server within the FMOH is possible with the support of a DHIS2 server administrator.
+The NTD DHIS2 Database[^myref] for Ethiopia is currently hosted by BAO Systems[^myref2], a leading DHIS2 cloud hosting provider.  BAO Systems provides nightly backups of the database and server administration support for server upgrades and is managed through their management portal (see Figure 1 below). The monthly fees for this service are billed annually at  $144/month. The current service contract with BAO Systems expired on November 30th, 2020.  If necessary, moving this database to another cloud hosting provider or even an on-premise server within the FMOH is possible with the support of a DHIS2 server administrator.
 
+[^myref]: https://ethiopia.integratedntddb.org/
+[^myref2]: https://www.baosystems.com/ 
 
 ![Portal](/_static/bao.png)
 
@@ -63,10 +65,10 @@ There are currently 4 types of users in the system including National Data Manag
 
 | Role| Tasks| Configuration| 
 | ------- | ------- | ------- |
-| National Data Manager| Review data across all regions </br> Use data analytics apps for analysis and reporting| |
-| Regional Data Manager| | |
-| District Data Officer| | |
-| System Administrator| | |
+| National Data Manager| Review data across all regions <br/><br/> Use data analytics apps for analysis and reporting| Data capture and maintenance organization units in the user’s profile set to country level <br/><br/>User role in the user’s profile set to Data Manager <br/><br/>User group set to National Dashboard Users|
+| Regional Data Manager| Review data across one region <br/><br/>Use data analytics apps for analysis and reporting| Data capture and maintenance organization units in the user’s profile set to a specific regional level <br/><br/> User role in the user’s profile set to Data Manager <br/><br/> User group set to **Regional Dashboard Users**|
+| District Data Officer| Enters data across one region <br/><br/>Use data analytics apps for analysis and reporting| Data capture and maintenance organization units in the user’s profile set to district level <br/><br/> User role in the user’s profile set to **Data Entry Officer** |
+| System Administrator| Edit Metadata <br/><br/> Add new users| Data capture and maintenance organization units in the user’s profile set to country level <br/><br/>User role in the user’s profile set to **Superuser**|
 
 
 Data Import
@@ -79,7 +81,13 @@ Using the Data Import Wizard app, this annual JRF, EPIRF, JRSM, TEMF, and WASH E
 
 | File| Dataset/Program| Mapping Name| Example Import| 
 | ------- | ------- | ------- | ------- |
-| | | | |
+| Joint Request Form | Joint Reporting Form| Joint Reporting Form| [JRF 2018 Import File.csv](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/JRF%25202018%2520Import%2520File.csv&sa=D&source=editors&ust=1651510003066674&usg=AOvVaw16OJqOIz20XUoGg0q0fKOa)| 
+| EPIRF| LF Morbidity management and disability prevention| EPIRF LF Morbidity - All Years| [EPIRF 2016 Import File.csv](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/EPIRF%2520Aggregate%2520All%2520Years%2520Import%2520File.csv&sa=D&source=editors&ust=1651510003068158&usg=AOvVaw0Ys3dxEP4aHPPKTOkJ5ZDm) | 
+| JRSM| Joint Request for Select Medicines| Joint Request for Select Medicines| [JRSM 2018 Import File.csv](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/JRSM%25202018%2520Import%2520File.csv&sa=D&source=editors&ust=1651510003069473&usg=AOvVaw2Yx7s-tRW-jDKFLx80Cid-)| 
+| TEMF| Trachoma Data| Trachoma Elimination Monitoring Form (TEMF)| [TEMF 2018 Import File.csv](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/TEMF%25202018%2520Import%2520File.csv&sa=D&source=editors&ust=1651510003071112&usg=AOvVaw1NjtXQI9t26otZ-lvprZoP)| 
+| Unicef Sanitation Microplanning| Sanitation Microplanning| Sanitary Microplanning at the Woreda Level| [unicef-wash-import-file.csv](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/Excel/unicef-wash-import-file.csv&sa=D&source=editors&ust=1651510003073219&usg=AOvVaw1Gb4G95ngaN4Rp8hKuJtS7)| 
+| STH| ESPEN STH EPI RF| STH Survey Import from ESPEN| [sth import for espen.csv](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/sth%2520import%2520for%2520espen.csv&sa=D&source=editors&ust=1651510003074585&usg=AOvVaw0eVQZKSR15ABZjLYp5zRef)| 
+| SCH| ESPEN SCH EPI RF| SCH Survey Import from ESPEN| [sch import for espen.csv](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/sch%2520import%2520for%2520espen.csv&sa=D&source=editors&ust=1651510003075789&usg=AOvVaw0uKQjdKIMgTPtdzTpGU0Oc)| 
 
 
 1. If it’s not already, install the Data Import Prepare the import file. All imported data need to conform to the value type of each data element. For example, data elements defined as Integers should be whole numbers.
@@ -87,39 +95,25 @@ Using the Data Import Wizard app, this annual JRF, EPIRF, JRSM, TEMF, and WASH E
 1. Review the import data and Import Summary screen and make corrections to the mapping or the data import file as needed.
 
 
+![Data Import Screenshot](/_static/import1.png)
+
+![The Second Data Import Screenshot](/_static/import2.png)
+
+
 ### Tropical Data
 
-Tropical Data is an online database of Trachoma survey data started by the Global Trachoma Mapping Project (GTMP). The NTD DHIS2 database pulls data from Tropical Data. This process works by executing a script which exports data using the Tropical Data API and then transforms it into a file that can be imported. This script and its documentation can be found here in NTD DHIS2 database code repository.
+Tropical Data is an online database of Trachoma survey data started by the Global Trachoma Mapping Project (GTMP). The NTD DHIS2 database pulls data from Tropical Data. This process works by executing a script which exports data using the Tropical Data API and then transforms it into a file that can be imported. This script and its documentation can be found [here](https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/Tropical%2520Data/Import%2520Tropical%2520Data.ipynb&sa=D&source=editors&ust=1651510003077434&usg=AOvVaw2m5M-xfeXii-rIRfx956l6) in NTD DHIS2 database code repository.
 
 ### WHO ESPEN Portal
 
-The ESPEN Portal is an electronic platform designed to enable health ministries and stakeholders to share, and exchange subnational program data, in support of the NTD control and elimination goals. The Expanded Special Project for Elimination of Neglected Tropical Diseases (ESPEN) was established as a partnership between WHO Regional Office for Africa (AFRO), the Member States and NTD partners The NTD DHIS2 database pulls data from ESPEN Portal. This process works by executing a script which exports data using the ESPEN Portal API and then transforms it into a file that can be imported. This script and its documentation can be found here in the NTD DHIS2 database code repository.
+The [ESPEN Portal](https://espen.afro.who.int/.) is an electronic platform designed to enable health ministries and stakeholders to share, and exchange subnational program data, in support of the NTD control and elimination goals. The Expanded Special Project for Elimination of Neglected Tropical Diseases (ESPEN) was established as a partnership between WHO Regional Office for Africa (AFRO), the Member States and NTD partners The NTD DHIS2 database pulls data from ESPEN Portal. This process works by executing a script which exports data using the ESPEN Portal API and then transforms it into a file that can be imported. This script and its documentation can be found [here](https://github.com/ntddhis2/ntd-dhis2-notebooks/tree/master/ESPEN%20Portal) in the NTD DHIS2 database code repository.
 
 ### NTDeliver
 
-NTDeliver is an online platform that centralizes and coordinates information from a variety of sources to better monitor and evaluate the NTD supply chain. The NTD DHIS2 database provides a view to the NTDeliver country summary report with a link provided on the Reports dashboard.
+[NTDeliver](https://www.ntdeliver.com/about) is an online platform that centralizes and coordinates information from a variety of sources to better monitor and evaluate the NTD supply chain. The NTD DHIS2 database provides a view to the NTDeliver country summary report with a link provided on the Reports dashboard.
 
 Questions
 -------------
-For questions on the DHIS2 for NTD, please post visit the DHIS2 Community of Practice.
+For questions on the DHIS2 for NTD, please post visit the [DHIS2 Community of Practice](https://community.dhis2.org/).
 
 
-
-	
-
-
-	
-
-
-	
-
-
-
-
-
-
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
