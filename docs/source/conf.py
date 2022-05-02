@@ -4,7 +4,7 @@
 
 project = 'NTD DHIS2 Documentation'
 copyright = '2021, RTI'
-author = 'Adam Preston'
+author = 'Sightsavers'
 
 release = '0.1'
 version = '0.1.0'
