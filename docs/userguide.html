@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Guide &mdash; NTD DHIS2 Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Administrator Guide" href="adminguide.html" />
+    <link rel="prev" title="NTD DHIS2 Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> NTD DHIS2 Documentation
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-request-an-account">How do I request an account?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-access-the-ntd-dhis2-database">How do I access the NTD DHIS2 database?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-data-are-included-in-the-ntd-dhis2-database">What data are included in the NTD DHIS2 database?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#does-the-ntd-dhis2-database-affect-how-i-collect-or-report-data">Does the NTD DHIS2 database affect how I collect or report data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-use">System Use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-all-available-visualization">Overview of all available visualization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adminguide.html">Administrator Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NTD DHIS2 Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/userguide.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p><strong>What is the NTD DHIS2 database?</strong>!</p>
+<p>The NTD DHIS2 database is a national NTD database that can be accessed by authorized Ministry of Health users and Partners by going to https://ethiopia.integratedntddb.org/. The NTD DHIS2 database uses DHIS2 (https://www.dhis2.org/) software as a data warehouse that integrates with external systems to provide one single source for all NTD programmatic data (Image 1). Under this model, no data is entered into the NTD DHIS2 database directly, rather, the data come from integrations with a wide range of external systems. Such as:</p>
+<ul class="simple">
+<li><p>Epidemiological surveys - Tropical Data, ESPEN Collect, EPHI</p></li>
+<li><p>MDA Treatments - HMIS indicators</p></li>
+<li><p>Stock - PFSA?</p></li>
+<li><p>Morbidity management - HMIS indicators</p></li>
+<li><p>Drug procurement tracking - NTDeliver</p></li>
+<li><p>WASH - mWater</p></li>
+</ul>
+<p><img alt="NTD DHIS2 database to aggregate all NTD programmatic data" src="_images/diagram.png" /></p>
+<p><strong>NTD DHIS2 database vs HMIS?</strong></p>
+<p>The national Health Management Information System (HMIS) is a data collection system designed to collect key health indicators from health facilities across the country on a wide range of health conditionals in order to support planning, management, and decision-making.</p>
+<p>The NTD DHIS2 database is a data warehouse that connects to a wide range of external databases to create a single data repository of all NTD programmatic data in Ethiopia. Some data, such as the routine reporting of MDA treatments and morbidity management come through HMIS facility-based reporting. Other data, such as the event data associated with epidemiological surveys, comes through integration with global systems, such as Tropical Data, or through national systems, such as electronic data collection tools implemented by the Ethiopia Public Health Institute (EPHI). All together, these NTD data allow the NTD program to plan, manage, and report on NTD control and elimination programming.</p>
+</section>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
+<section id="how-do-i-request-an-account">
+<h3>How do I request an account?<a class="headerlink" href="#how-do-i-request-an-account" title="Permalink to this headline"></a></h3>
+<p>To request access to the NTD DHIS2 database you will need to submit your request to the FMOH DHIS2 administrator by email to tsede171&#64;gmail.com. Your request should include the following information: Name, Phone number with country code, Email address, Organization name</p>
+</section>
+<section id="how-do-i-access-the-ntd-dhis2-database">
+<h3>How do I access the NTD DHIS2 database?<a class="headerlink" href="#how-do-i-access-the-ntd-dhis2-database" title="Permalink to this headline"></a></h3>
+<p>The NTD DHIS2 database can be accessed using your web browser by going to <a class="reference external" href="https://ethiopia.integratedntddb.org/">here</a> and logging in with your assigned username and password. The level of access within the system is granted to you by the NTD DHIS2 administrator.</p>
+<p><img alt="NTD DHIS2 database to aggregate all NTD programmatic data" src="_images/dhis2.png" /></p>
+</section>
+</section>
+<section id="what-data-are-included-in-the-ntd-dhis2-database">
+<h2>What data are included in the NTD DHIS2 database?<a class="headerlink" href="#what-data-are-included-in-the-ntd-dhis2-database" title="Permalink to this headline"></a></h2>
+<p>The NTD DHIS2 database includes the following data at district level:</p>
+<ul class="simple">
+<li><p>Endemicity data for the five PC-NTDs</p>
+<ul>
+<li><p>2015, 2016, 2017, 2018, 2019</p></li>
+</ul>
+</li>
+<li><p>MDA treatment data for the five PC-NTDs</p>
+<ul>
+<li><p>2015, 2016, 2017, 2018, 2019</p></li>
+</ul>
+</li>
+<li><p>National figures for morbidity management treatment data for LF</p>
+<ul>
+<li><p>2015, 2016, 2017, 2018, 2019</p></li>
+</ul>
+</li>
+<li><p>Integration with external systems</p>
+<ul>
+<li><p>ESPEN Produced 10 year MDA and Impact Assessment Forecast</p></li>
+<li><p>NTDeliver donation procurement database (standard report only)</p></li>
+<li><p>Tropical Data survey results</p></li>
+<li><p>mWater data (Water and sanitation)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="does-the-ntd-dhis2-database-affect-how-i-collect-or-report-data">
+<h2>Does the NTD DHIS2 database affect how I collect or report data?<a class="headerlink" href="#does-the-ntd-dhis2-database-affect-how-i-collect-or-report-data" title="Permalink to this headline"></a></h2>
+<p>It is unlikely that the NTD DHIS2 database affects how you collect or report data. The NTD DHIS2 database is integrated with a number of systems that will automatically pull data into the database without any changes to the existing workflow. For example, if you are conducting a Trachoma Impact Survey (TIS) using Tropical Data, these survey results will be automatically shared with the NTD DHIS2 database through system integration with Tropical Data. Another example is reporting numbers treated during an MDA. Numbers treated are reported in HMIS by the Health Information Technology Department. These treatment data will be automatically added to the NTD DHIS2 database through system integration with HMIS. If you have questions about who specific data are included in the NTD DHIS2 database, please contact the M&amp;E Advisor at the FMOH.</p>
+</section>
+<section id="system-use">
+<h2>System Use<a class="headerlink" href="#system-use" title="Permalink to this headline"></a></h2>
+<section id="overview-of-all-available-visualization">
+<h3>Overview of all available visualization<a class="headerlink" href="#overview-of-all-available-visualization" title="Permalink to this headline"></a></h3>
+<p>Above the dashboard is the control bar, which shows all your available dashboards, including a dashboard search field, and a + button for creating a new dashboard.</p>
+<p><img alt="A menu" src="_images/dhis2.png" /></p>
+<p>Each dashboard item has the same controls, including expanding to full screen, opening a map legend, and adding an interpretation.</p>
+<p><img alt="A menu" src="_images/fullmap.png" /></p>
+<p>The NTD DHIS2 database presents coverage and endemicity for each of the five PC NTDs along with IU level forecasts, MMDP, Reports from NTDeliver, Tropical Data survey results, and WASH and NTD data merge.</p>
+<p><strong>Coverage</strong></p>
+<p><img alt="Coverage" src="_images/coverage.png" /></p>
+<div class="admonition-what-are-interpretations-and-how-do-i-add-one-if-i-want-to-comment-on-a-visualization admonition">
+<p class="admonition-title">What are interpretations and how do I add one if I want to comment on a visualization?</p>
+<p>The interpretation feature in DHIS2 allows users to comment on data using chat and like functions that are similar to Facebook. The benefit of adding an interpretation is that the comment is linked to the data visualization and adds context for all future viewers.</p>
+<p>To add an interpretation you will need to log on to the NTD DHIS2 database and go to the visualization for which you want to add your interpretation. Click the interpretation icon (see image below) to open the interpretation box.</p>
+</div>
+<p><strong>Endemicity</strong>
+<img alt="Endemicity" src="_images/endemicity.png" /></p>
+<p><img alt="Fullmap" src="_images/fullmap2.png" /></p>
+<p>For more information see the <a class="reference external" href="https://docs.dhis2.org/master/en/user/html/interpretations.html">DHIS2 user manual</a>:</p>
+<div class="admonition-what-do-i-do-if-i-think-i-see-a-data-error-or-missing-data admonition">
+<p class="admonition-title">What do I do if I think I see a data error or missing data?</p>
+<p>If you see data that are incorrect, please add an interpretation to explain the error (see previous section). Data in the NTD DHIS2 database may or may not be able to be edited directly in the database. Some of the data available in the system comes from integration with external databases. When this is the case, these data can only be updated on the source system. Please contact the FMOH M&amp;E Advisor for additional guidance.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="NTD DHIS2 Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adminguide.html" class="btn btn-neutral float-right" title="Administrator Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, RTI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

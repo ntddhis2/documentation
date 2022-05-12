@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administrator Guide &mdash; NTD DHIS2 Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="User Guide" href="userguide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> NTD DHIS2 Documentation
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Administrator Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hosting">Hosting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-model">Data model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-roles">User Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-import">Data Import</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#microsoft-excel">Microsoft Excel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tropical-data">Tropical Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-espen-portal">WHO ESPEN Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ntdeliver">NTDeliver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#questions">Questions</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NTD DHIS2 Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Administrator Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/adminguide.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="administrator-guide">
+<h1>Administrator Guide<a class="headerlink" href="#administrator-guide" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p><strong>What is the NTD DHIS2 database?</strong>!</p>
+<p>The NTD DHIS2 database is a national NTD database that can be accessed by authorized Ministry of Health users and Partners by going to <a class="reference external" href="https://ethiopia.integratedntddb.org/">here</a>. The NTD DHIS2 database uses DHIS2 <a class="reference external" href="https://www.dhis2.org/">DHIS2</a> software as a data warehouse that integrates with external systems to provide one single source for all NTD programmatic data (Image 1). Under this model, no data is entered into the NTD DHIS2 database directly, rather, the data come from integrations with a wide range of external systems. Such as:</p>
+<ul class="simple">
+<li><p>Epidemiological surveys - Tropical Data, ESPEN Collect, EPHI</p></li>
+<li><p>MDA Treatments - HMIS indicators</p></li>
+<li><p>Stock - PFSA?</p></li>
+<li><p>Morbidity management - HMIS indicators</p></li>
+<li><p>Drug procurement tracking - NTDeliver</p></li>
+<li><p>WASH - mWater</p></li>
+</ul>
+<p><img alt="NTD DHIS2 database to aggregate all NTD programmatic data" src="_images/diagram.png" /></p>
+<p><strong>NTD DHIS2 database vs HMIS?</strong></p>
+<p>The national Health Management Information System (HMIS) is a data collection system designed to collect key health indicators from health facilities across the country on a wide range of health conditionals in order to support planning, management, and decision-making.</p>
+<p>The NTD DHIS2 database is a data warehouse that connects to a wide range of external databases to create a single data repository of all NTD programmatic data in Ethiopia. Some data, such as the routine reporting of MDA treatments and morbidity management come through HMIS facility-based reporting. Other data, such as the event data associated with epidemiological surveys, comes through integration with global systems, such as Tropical Data, or through national systems, such as electronic data collection tools implemented by the Ethiopia Public Health Institute (EPHI). All together, these NTD data allow the NTD program to plan, manage, and report on NTD control and elimination programming.</p>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
+<section id="hosting">
+<h3>Hosting<a class="headerlink" href="#hosting" title="Permalink to this headline"></a></h3>
+<p>The NTD DHIS2 Database<a class="footnote-reference brackets" href="#myref" id="id1">1</a> for Ethiopia is currently hosted by BAO Systems<a class="footnote-reference brackets" href="#myref2" id="id2">2</a>, a leading DHIS2 cloud hosting provider.  BAO Systems provides nightly backups of the database and server administration support for server upgrades and is managed through their management portal (see Figure 1 below). The monthly fees for this service are billed annually at  $144/month. The current service contract with BAO Systems expired on November 30th, 2020.  If necessary, moving this database to another cloud hosting provider or even an on-premise server within the FMOH is possible with the support of a DHIS2 server administrator.</p>
+<p><img alt="Portal" src="_images/bao.png" /></p>
+</section>
+<section id="data-model">
+<h3>Data model<a class="headerlink" href="#data-model" title="Permalink to this headline"></a></h3>
+<p>The NTD DHIS2 data model consists of 11 datasets</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Data Collection Period</p></th>
+<th class="head"><p>Organization Unit Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ESPEN Forecast</p></td>
+<td><p>Impact Assessment forecasts and MDA forecasts at the district level populated from the ESPEN Portal.</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-odd"><td><p>Implementation Partners</p></td>
+<td><p>Implementation partners fro NTD, MDA and WASH</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-even"><td><p>Integrated NTD Reporting Form</p></td>
+<td><p>The FMOH reporting form for tracking NTD across the 5 PC NTDs</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-odd"><td><p>Integrated NTD Reporting Form (Pre 2018)</p></td>
+<td><p>The FMOH reporting form for tracking NTD across the 5 PC NTDs used prior to 2018</p></td>
+<td><p>Monthly</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-even"><td><p>Joint Reporting Form (JRF)</p></td>
+<td><p>Treatment data across drug packages used for WHO reporting</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-odd"><td><p>Joint Request for Select Medicines (JRSM)</p></td>
+<td><p>Treatment planning across drug packaged used for WHO reporting</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-even"><td><p>LF Morbidity Management and Disability Prevention</p></td>
+<td><p>Country level MMDP summary statistics for Lymphedema    and Hydrocele</p></td>
+<td><p>Annual</p></td>
+<td><p>Country</p></td>
+</tr>
+<tr class="row-odd"><td><p>National Demographics</p></td>
+<td><p>National annual projection percentages for population growth and presac/sac and adult population percentages</p></td>
+<td><p>Annual</p></td>
+<td><p>Country</p></td>
+</tr>
+<tr class="row-even"><td><p>Sanitation Microplanning</p></td>
+<td><p>Sanitation microplanning data supported by UNICEF</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trachoma Data</p></td>
+<td><p>Survey statistics and Treatment data fro Trachoma used for IT reporting.</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+<tr class="row-even"><td><p>Tropical Data</p></td>
+<td><p>Survey statistics and Treatment data fro Trachoma used for IT reporting imported from Tropical Data</p></td>
+<td><p>Annual</p></td>
+<td><p>Woreda</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="user-roles">
+<h3>User Roles<a class="headerlink" href="#user-roles" title="Permalink to this headline"></a></h3>
+<p>There are currently 4 types of users in the system including National Data Manager, Regional Data Manager. These roles for the NTD Database for DHIS2 are based on the recommendations for user management in a health system.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Tasks</p></th>
+<th class="head"><p>Configuration</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>National Data Manager</p></td>
+<td><p>Review data across all regions <br/><br/> Use data analytics apps for analysis and reporting</p></td>
+<td><p>Data capture and maintenance organization units in the user’s profile set to country level <br/><br/>User role in the user’s profile set to Data Manager <br/><br/>User group set to National Dashboard Users</p></td>
+</tr>
+<tr class="row-odd"><td><p>Regional Data Manager</p></td>
+<td><p>Review data across one region <br/><br/>Use data analytics apps for analysis and reporting</p></td>
+<td><p>Data capture and maintenance organization units in the user’s profile set to a specific regional level <br/><br/> User role in the user’s profile set to Data Manager <br/><br/> User group set to <strong>Regional Dashboard Users</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>District Data Officer</p></td>
+<td><p>Enters data across one region <br/><br/>Use data analytics apps for analysis and reporting</p></td>
+<td><p>Data capture and maintenance organization units in the user’s profile set to district level <br/><br/> User role in the user’s profile set to <strong>Data Entry Officer</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>System Administrator</p></td>
+<td><p>Edit Metadata <br/><br/> Add new users</p></td>
+<td><p>Data capture and maintenance organization units in the user’s profile set to country level <br/><br/>User role in the user’s profile set to <strong>Superuser</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="data-import">
+<h2>Data Import<a class="headerlink" href="#data-import" title="Permalink to this headline"></a></h2>
+<section id="microsoft-excel">
+<h3>Microsoft Excel<a class="headerlink" href="#microsoft-excel" title="Permalink to this headline"></a></h3>
+<p>Using the Data Import Wizard app, this annual JRF, EPIRF, JRSM, TEMF, and WASH Excel workbook can be imported directly into the database.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Dataset/Program</p></th>
+<th class="head"><p>Mapping Name</p></th>
+<th class="head"><p>Example Import</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Joint Request Form</p></td>
+<td><p>Joint Reporting Form</p></td>
+<td><p>Joint Reporting Form</p></td>
+<td><p><a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/JRF%25202018%2520Import%2520File.csv&amp;sa=D&amp;source=editors&amp;ust=1651510003066674&amp;usg=AOvVaw16OJqOIz20XUoGg0q0fKOa">JRF 2018 Import File.csv</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>EPIRF</p></td>
+<td><p>LF Morbidity management and disability prevention</p></td>
+<td><p>EPIRF LF Morbidity - All Years</p></td>
+<td><p><a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/EPIRF%2520Aggregate%2520All%2520Years%2520Import%2520File.csv&amp;sa=D&amp;source=editors&amp;ust=1651510003068158&amp;usg=AOvVaw0Ys3dxEP4aHPPKTOkJ5ZDm">EPIRF 2016 Import File.csv</a></p></td>
+</tr>
+<tr class="row-even"><td><p>JRSM</p></td>
+<td><p>Joint Request for Select Medicines</p></td>
+<td><p>Joint Request for Select Medicines</p></td>
+<td><p><a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/JRSM%25202018%2520Import%2520File.csv&amp;sa=D&amp;source=editors&amp;ust=1651510003069473&amp;usg=AOvVaw2Yx7s-tRW-jDKFLx80Cid-">JRSM 2018 Import File.csv</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TEMF</p></td>
+<td><p>Trachoma Data</p></td>
+<td><p>Trachoma Elimination Monitoring Form (TEMF)</p></td>
+<td><p><a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/TEMF%25202018%2520Import%2520File.csv&amp;sa=D&amp;source=editors&amp;ust=1651510003071112&amp;usg=AOvVaw1NjtXQI9t26otZ-lvprZoP">TEMF 2018 Import File.csv</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Unicef Sanitation Microplanning</p></td>
+<td><p>Sanitation Microplanning</p></td>
+<td><p>Sanitary Microplanning at the Woreda Level</p></td>
+<td><p><a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/Excel/unicef-wash-import-file.csv&amp;sa=D&amp;source=editors&amp;ust=1651510003073219&amp;usg=AOvVaw1Gb4G95ngaN4Rp8hKuJtS7">unicef-wash-import-file.csv</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>STH</p></td>
+<td><p>ESPEN STH EPI RF</p></td>
+<td><p>STH Survey Import from ESPEN</p></td>
+<td><p><a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/sth%2520import%2520for%2520espen.csv&amp;sa=D&amp;source=editors&amp;ust=1651510003074585&amp;usg=AOvVaw0eVQZKSR15ABZjLYp5zRef">sth import for espen.csv</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SCH</p></td>
+<td><p>ESPEN SCH EPI RF</p></td>
+<td><p>SCH Survey Import from ESPEN</p></td>
+<td><p><a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/CSV/sch%2520import%2520for%2520espen.csv&amp;sa=D&amp;source=editors&amp;ust=1651510003075789&amp;usg=AOvVaw0uKQjdKIMgTPtdzTpGU0Oc">sch import for espen.csv</a></p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>If it’s not already, install the Data Import Prepare the import file. All imported data need to conform to the value type of each data element. For example, data elements defined as Integers should be whole numbers.</p></li>
+<li><p>Create the Mapping. In DHIS2, navigate to the Data Import Wizard and select Aggregate from the menu and click on the appropriate mapping for the file type being imported.  When prompted for an import file,  sel</p></li>
+<li><p>Review the import data and Import Summary screen and make corrections to the mapping or the data import file as needed.</p></li>
+</ol>
+<p><img alt="Data Import Screenshot" src="_images/import1.png" /></p>
+<p><img alt="The Second Data Import Screenshot" src="_images/import2.png" /></p>
+</section>
+<section id="tropical-data">
+<h3>Tropical Data<a class="headerlink" href="#tropical-data" title="Permalink to this headline"></a></h3>
+<p>Tropical Data is an online database of Trachoma survey data started by the Global Trachoma Mapping Project (GTMP). The NTD DHIS2 database pulls data from Tropical Data. This process works by executing a script which exports data using the Tropical Data API and then transforms it into a file that can be imported. This script and its documentation can be found <a class="reference external" href="https://www.google.com/url?q=https://github.com/ntddhis2/ntd-dhis2-notebooks/blob/master/Tropical%2520Data/Import%2520Tropical%2520Data.ipynb&amp;sa=D&amp;source=editors&amp;ust=1651510003077434&amp;usg=AOvVaw2m5M-xfeXii-rIRfx956l6">here</a> in NTD DHIS2 database code repository.</p>
+</section>
+<section id="who-espen-portal">
+<h3>WHO ESPEN Portal<a class="headerlink" href="#who-espen-portal" title="Permalink to this headline"></a></h3>
+<p>The <a class="reference external" href="https://espen.afro.who.int/.">ESPEN Portal</a> is an electronic platform designed to enable health ministries and stakeholders to share, and exchange subnational program data, in support of the NTD control and elimination goals. The Expanded Special Project for Elimination of Neglected Tropical Diseases (ESPEN) was established as a partnership between WHO Regional Office for Africa (AFRO), the Member States and NTD partners The NTD DHIS2 database pulls data from ESPEN Portal. This process works by executing a script which exports data using the ESPEN Portal API and then transforms it into a file that can be imported. This script and its documentation can be found <a class="reference external" href="https://github.com/ntddhis2/ntd-dhis2-notebooks/tree/master/ESPEN%20Portal">here</a> in the NTD DHIS2 database code repository.</p>
+</section>
+<section id="ntdeliver">
+<h3>NTDeliver<a class="headerlink" href="#ntdeliver" title="Permalink to this headline"></a></h3>
+<p><a class="reference external" href="https://www.ntdeliver.com/about">NTDeliver</a> is an online platform that centralizes and coordinates information from a variety of sources to better monitor and evaluate the NTD supply chain. The NTD DHIS2 database provides a view to the NTDeliver country summary report with a link provided on the Reports dashboard.</p>
+</section>
+</section>
+<section id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline"></a></h2>
+<p>For questions on the DHIS2 for NTD, please post visit the <a class="reference external" href="https://community.dhis2.org/">DHIS2 Community of Practice</a>.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="myref"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>https://ethiopia.integratedntddb.org/</p>
+</dd>
+<dt class="label" id="myref2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>https://www.baosystems.com/</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="userguide.html" class="btn btn-neutral float-left" title="User Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, RTI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
