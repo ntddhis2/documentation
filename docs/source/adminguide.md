@@ -77,8 +77,21 @@ There are currently 4 types of users in the system including National Data Manag
 | System Administrator| Edit Metadata <br/><br/> Add new users| Data capture and maintenance organization units in the user’s profile set to country level <br/><br/>User role in the user’s profile set to **Superuser**|
 
 
+Metadata Download
+-------------
+
+There are two metadata packages to support the basic configuration offered in this the NTD Database
+
+
+| Package Name |DHIS2 Version| Package Version| Metadata| Updated| 
+| ------- | ------- | ------- | ------- | ------- |
+| ESPEN Forecast|2.35.10 | V1.0| [Download Package](https://raw.githubusercontent.com/ntddhis2/ntddb-metadata/master/metadata.json)| 18 May 2022 |
+
+
 Data Import
 -------------
+
+The NTD Database supports data import from several different data sources including Microsoft Excel, Tropical Data, ESPEN Portal, and NTD Deliever.
 
 ### Microsoft Excel
 	
