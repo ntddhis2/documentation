@@ -2,7 +2,7 @@ Administrator Guide
 ============================
 
 
-Introduction
+Introductions
 -------------
 
 **What is the NTD DHIS2 database?**!
