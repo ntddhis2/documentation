@@ -95,7 +95,7 @@ The NTD Database supports data import from several different data sources includ
 
 ### Microsoft Excel
 	
-Using the Data Import Wizard app, this annual JRF, EPIRF, JRSM, TEMF, and WASH Excel workbook can be imported directly into the database.
+Using the [Data Import Wizard](https://apps.dhis2.org/app/190583b7-e39b-4e52-a1c9-c7641aeaa833) app, this annual JRF, EPIRF, JRSM, TEMF, and WASH Excel workbook can be imported directly into the database.
 
 
 | File| Dataset/Program| Mapping Name| Example Import| 
