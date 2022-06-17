@@ -2,9 +2,9 @@ The NTD DHIS2 Documentation
 =======================================
 
 
-Read the tutorial here:
+Read the docs online here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://ntddhis2.github.io/documentation/adminguide.html
 
 
 **To build from source** (goes to docs/source/html folder)::
