@@ -14,7 +14,7 @@ Trachoma Elimination Monitoring Form https://www.trachoma.org/zithromax-manageme
 The NTD database is designed to be a downstream data store, where data will be collected and aggregated by other systems, such as global survey tools, HMIS, or national or partner systems. The NTD database is designed to import annual reporting forms, which are produced through processes outside of this system, and store those data in a central, nationally owned, database. The NTD database could be a resource for completing those forms if data collection and reporting systems and tools are integrated with the NTD database. In this guide we will discuss such integrations.
 
 
-![NTD DHIS2 database to aggregate all NTD programmatic data](https://www.dropbox.com/s/xosw8210pn2fhyr/Full%20data%20flow.PNG)
+![NTD DHIS2 database to aggregate all NTD programmatic data](../_images/DataFlowGitHub.JPG)
 
 
 Introduction
@@ -26,9 +26,9 @@ The NTD DHIS2 database is designed to help national programmes to implement a NT
 
 The NTD DHIS2 database is a good fit for national programmes who want to have a single database, which is accessible at national, sub-national, and global levels, and can provide data visualizations of these data to encourage engagement and use. The NTD DHIS2 database is not meant to compete with national health management information systems (HMIS), which likely also uses DHIS2 software. Rather, the NTD DHIS2 database is designed to aggregate data from HMIS, survey, research, and other sources, into a single database.
 
-```{note}
+
 To learn more about the DHIS2 data model click [here](https://docs.dhis2.org/en/use/user-guides/dhis-core-version-238/understanding-the-data-model/about-data-dimensions.html).
-```
+
 
 ### Does the NTD DHIS2 database affect how I collect or report data?
 
@@ -56,7 +56,7 @@ The NTD DHIS2 Database[^myref] for Ethiopia is currently hosted by BAO Systems[^
 [^myref]: https://ethiopia.integratedntddb.org/
 [^myref2]: https://www.baosystems.com/ 
 
-![Portal](/_static/bao.png)
+![Portal](../_images/bao.png)
 
 ### Data model
 
@@ -128,9 +128,9 @@ Using the [Data Import Wizard](https://apps.dhis2.org/app/190583b7-e39b-4e52-a1c
 1. Review the import data and Import Summary screen and make corrections to the mapping or the data import file as needed.
 
 
-![Data Import Screenshot](/_static/import1.png)
+![Data Import Screenshot](../_images/import1.png)
 
-![The Second Data Import Screenshot](/_static/import2.png)
+![The Second Data Import Screenshot](../_images/import2.png)
 
 
 ### Tropical Data
