@@ -2,38 +2,52 @@ Administrator Guide
 ============================
 
 
-Introductions
+About this project
 -------------
 
-**What is the NTD DHIS2 database?**!
+The NTD DHIS2 database project seeks to develop a stand-alone national NTD database using DHIS2 software. This system is designed around the data elements and disaggregations required to complete annual drug donation reporting forms such as the Joint Reporting Form (treatments distributed for LF, Oncho, STH, and SCH), the Epidemiological Reporting Form (epidemiological surveys for LF, Oncho, STH, and SCH to determine baseline endemicity or update endemicity status), and the Trachoma Elimination Monitoring Form (both treatments and endemicity data). These forms can be found here:
+
+Joint Application Package (JRSM, JRF, EPIRF) https://www.who.int/teams/control-of-neglected-tropical-diseases/preventive-chemotherapy/joint-application-package 
+
+Trachoma Elimination Monitoring Form https://www.trachoma.org/zithromax-management-guide 
+
+The NTD database is designed to be a downstream data store, where data will be collected and aggregated by other systems, such as global survey tools, HMIS, or national or partner systems. The NTD database is designed to import annual reporting forms, which are produced through processes outside of this system, and store those data in a central, nationally owned, database. The NTD database could be a resource for completing those forms if data collection and reporting systems and tools are integrated with the NTD database. In this guide we will discuss such integrations.
 
 
-The NTD DHIS2 database is a national NTD database that can be accessed by authorized Ministry of Health users and Partners by going to [here](https://ethiopia.integratedntddb.org/). The NTD DHIS2 database uses DHIS2 [DHIS2](https://www.dhis2.org/) software as a data warehouse that integrates with external systems to provide one single source for all NTD programmatic data (Image 1). Under this model, no data is entered into the NTD DHIS2 database directly, rather, the data come from integrations with a wide range of external systems. Such as:
-
-* Epidemiological surveys - Tropical Data, ESPEN Collect, EPHI
-* MDA Treatments - HMIS indicators
-* Stock - PFSA?
-* Morbidity management - HMIS indicators
-* Drug procurement tracking - NTDeliver
-* WASH - mWater
-
-![NTD DHIS2 database to aggregate all NTD programmatic data](/_static/diagram.png)
+![NTD DHIS2 database to aggregate all NTD programmatic data](../_images/DataFlowGitHub.JPG)
 
 
-**NTD DHIS2 database vs HMIS?**
+Introduction
+-------------
 
-The national Health Management Information System (HMIS) is a data collection system designed to collect key health indicators from health facilities across the country on a wide range of health conditionals in order to support planning, management, and decision-making.
+### Is the NTD DHIS2 database a good fit for your use case?
 
-The NTD DHIS2 database is a data warehouse that connects to a wide range of external databases to create a single data repository of all NTD programmatic data in Ethiopia. Some data, such as the routine reporting of MDA treatments and morbidity management come through HMIS facility-based reporting. Other data, such as the event data associated with epidemiological surveys, comes through integration with global systems, such as Tropical Data, or through national systems, such as electronic data collection tools implemented by the Ethiopia Public Health Institute (EPHI). All together, these NTD data allow the NTD program to plan, manage, and report on NTD control and elimination programming.
+The NTD DHIS2 database is designed to help national programmes to implement a NTD database, at national level, which stores all programmatic data that are reported on annual reporting forms. These data can be augmented to include data which could be programmatically important but not captured on annual reporting forms. Examples of such data could be research data, entomology data, human resource and training data, and budget data. The addition of these data is outside of the scope of this document. For guidance, please see the DHIS2 fundamentals or other training on how to add new data elements and category combinations along with data entry forms.
 
-```{note}
+The NTD DHIS2 database is a good fit for national programmes who want to have a single database, which is accessible at national, sub-national, and global levels, and can provide data visualizations of these data to encourage engagement and use. The NTD DHIS2 database is not meant to compete with national health management information systems (HMIS), which likely also uses DHIS2 software. Rather, the NTD DHIS2 database is designed to aggregate data from HMIS, survey, research, and other sources, into a single database.
+
+
 To learn more about the DHIS2 data model click [here](https://docs.dhis2.org/en/use/user-guides/dhis-core-version-238/understanding-the-data-model/about-data-dimensions.html).
-```
 
 
+### Does the NTD DHIS2 database affect how I collect or report data?
 
-Getting Started
+It is unlikely that the NTD DHIS2 database affects how you collect or report data. The NTD DHIS2 database is integrated with a number of systems that will automatically pull data into the database without any changes to the existing workflow. For example, if you are conducting a Trachoma Impact Survey (TIS) using Tropical Data, these survey results will be automatically shared with the NTD DHIS2 database through system integration with Tropical Data. Another example is reporting numbers treated during an MDA. Numbers treated are reported in HMIS by the Health Information Technology Department. These treatment data will be automatically added to the NTD DHIS2 database through system integration with HMIS. If you have questions about who specific data are included in the NTD DHIS2 database, please contact the M&E Advisor at the FMOH.
+
+Getting started
 -------------
+
+### Software
+
+To get started you will need to have a DHIS2 database running on either your local computer or accessible from a central server. 
+You will need the NTD DHIS2 database meta data [LINK], which defines the data elements and category combinations needed to store annual reporting form data.
+You will need a list of administrative units and the admin hierarchy. These data will be matched against the data you import to satisfy the “where” dimension of DHIS2 databases.
+You will need to add the following DHIS2 apps from the app store:
+X
+Y
+Z
+Additionally, WHO is working on metadata packages that might be another source for adding indicators to the NTD DHIS2 database. You can find a list of those metadata packages here: https://dhis2.org/who/ 
+
 
 ### Hosting
 
@@ -42,7 +56,7 @@ The NTD DHIS2 Database[^myref] for Ethiopia is currently hosted by BAO Systems[^
 [^myref]: https://ethiopia.integratedntddb.org/
 [^myref2]: https://www.baosystems.com/ 
 
-![Portal](/_static/bao.png)
+![Portal](../_images/bao.png)
 
 ### Data model
 
@@ -114,9 +128,9 @@ Using the [Data Import Wizard](https://apps.dhis2.org/app/190583b7-e39b-4e52-a1c
 1. Review the import data and Import Summary screen and make corrections to the mapping or the data import file as needed.
 
 
-![Data Import Screenshot](/_static/import1.png)
+![Data Import Screenshot](../_images/import1.png)
 
-![The Second Data Import Screenshot](/_static/import2.png)
+![The Second Data Import Screenshot](../_images/import2.png)
 
 
 ### Tropical Data
